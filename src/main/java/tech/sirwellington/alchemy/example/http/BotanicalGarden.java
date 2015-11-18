@@ -45,7 +45,7 @@ public class BotanicalGarden
 
         AlchemyHttp http = AlchemyHttp.newDefaultInstance();
 
-        LOG.info("Making GET request to {}", state);
+        LOG.info("Making GET request to {}", url);
 
         HttpResponse response = http.go()
             .get()
