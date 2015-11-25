@@ -32,14 +32,15 @@ public class Herbarium
 
         String state = selectRandomState();
 
-        String url = "http://sweetgum.nybg.org/science/v1/institution/" + state;
+        String url = "http://sweetgum.nybg.org/science/v1/institutions?country=u.s.a.";
 
         AlchemyHttp http = AlchemyHttp.newDefaultInstance();
 
-        LOG.info("Making GET request to {}", url);
+        LOG.info("Making GET request to {} for state {}", url, state);
 
         HttpResponse response = http.go()
             .get()
+            .usingQueryParam("state", state)
             .at(url);
 
         LOG.info("Response: {} : {}", response.statusCode(), response.responseHeaders());
@@ -52,7 +53,7 @@ public class Herbarium
     {
         Iterable<String> states = Splitter.on(", ")
             .omitEmptyStrings()
-            .split("NY, NJ, CA, MD, VA, DC, FL, TX, MN");
+            .split("New York, New Jersey, California, Maryland, Virginia, DC, Florida, Texas, Kansas");
 
         ArrayList<String> statesList = Lists.newArrayList(states);
         return one(stringsFromFixedList(statesList));
