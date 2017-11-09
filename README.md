@@ -4,7 +4,7 @@ Herbarium API Java Example
 [<img src="https://raw.githubusercontent.com/SirWellington/alchemy/develop/Graphics/Logo/Alchemy-Logo-v3-name.png" width="200">](https://github.com/SirWellington/alchemy)
 
 This project uses [Alchemy Http](https://github.com/SirWellington/alchemy-http) to make REST calls to the new 
-[NYBG API](http://sweetgum.nybg.org/science/v1/).
+[NYBG API](https://github.com/nybgvh/IH-API/wiki).
 
 # Requirements
 + Java 8
