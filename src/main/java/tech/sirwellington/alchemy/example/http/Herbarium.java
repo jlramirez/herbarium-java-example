@@ -2,6 +2,7 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
+ * Refer to https://github.com/nybgvh/IH-API/wiki for NYBG API documentation.
  */
 
 package tech.sirwellington.alchemy.example.http;
@@ -32,7 +33,7 @@ public class Herbarium
 
         String state = selectRandomState();
 
-        String url = "http://sweetgum.nybg.org/science/v1/institutions?country=u.s.a.";
+        String url = "http://sweetgum.nybg.org/science/api/v1/institutions/search?country=u.s.a.";
 
         AlchemyHttp http = AlchemyHttp.newDefaultInstance();
 
